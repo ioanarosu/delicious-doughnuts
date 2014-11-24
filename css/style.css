@@ -1,0 +1,36 @@
+html { font-size: 62.5%; }
+.header {
+	background-color: #FEE684;
+	height: 70px;
+}
+row {
+	max-width: 100rem;
+}
+.logo {
+	display: inline-block;
+	float: left;
+	text-align: right;
+}
+.logo h1 {
+	color: #5C391A;
+	font-size: 3rem;
+	margin: 5px 0 0 0;
+}
+.logo p {
+	color: #4A4A4A;
+	font-size: 1rem;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.8rem;
+	color: #4A4A4A;
+	font-weight: 400;
+}
+.right {
+	float: right;
+}
+.right li {
+	list-style: none;
+	display: inline-block;
+
+}
