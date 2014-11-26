@@ -1,0 +1,193 @@
+@import "settings";
+@import "../bower_components/foundation/scss/normalize";
+@import "../bower_components/foundation/scss/foundation/components/global";
+@import "../bower_components/foundation/scss/foundation/components/type";
+@import "../bower_components/foundation/scss/foundation/components/grid";
+
+$yellow: #FEE684;
+$pink: #FA927E;
+$brown: #8B572A;
+$pale-yellow: #FFFAEB;
+
+$header-height: rem-calc(70);
+
+@mixin default-svg {
+	width: rem-calc(22);
+	height: rem-calc(22);
+}
+@mixin default-path {
+	fill: #613D1C;
+}
+body {
+	// font-family: "Open Sans", sans-serif;
+	color: #4A4A4A;
+	background-color: $pale-yellow;
+}
+// START HEADER
+
+.header {
+	background-color: $yellow;
+	height: $header-height;
+}
+.logo-area {
+	display: inline-block;
+	float: left;
+	text-align: right;
+}
+.logo img {
+	height: rem-calc(40);
+	padding-top: rem-calc(6);
+}
+.logo-area p {
+	color: #4A4A4A;
+	font-size: rem-calc(12);
+	margin: 0;
+}
+
+.nav-menu {
+	float: right;
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+		display: inline-block;
+		color: $brown;
+		font-size: rem-calc(18);
+		padding: rem-calc(18) rem-calc(5) 0;
+		font-weight: 400;
+		height: $header-height;
+		&:hover {
+			color: #fff;
+			background-color: $pink;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+a {
+	color: $brown;
+	&:hover {
+		color: $brown;
+	}
+}
+
+// END HEADER
+
+// START MAIN CONTENT
+.slider {
+	background: url(../images/cornete2.jpg) no-repeat no-repeat center;
+	background-size: cover;
+	height: rem-calc(486);
+}
+// start noutati delicioase
+.wrap {
+	margin-top: rem-calc(40);
+}
+.bg-color {
+	background-color: $yellow;
+}
+h2 {
+ color: $brown;
+ font-family: "Curlz";
+}
+.introduction-box {
+	height: rem-calc(250);
+	padding: rem-calc(25) rem-calc(25);
+	svg {
+		@include default-svg;
+	}
+	path {
+		@include default-path;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+.info-loc-centered {
+		text-align: center;
+		font-size: rem-calc(16);
+		p {
+			margin-bottom: rem-calc(10);
+		}
+}
+
+.center-image {
+	position: relative;
+	height: rem-calc(250);
+	overflow: hidden;
+	img {
+		top: -100%;
+		bottom: -100%;
+		left: -100%;
+		right: -100%;
+		max-width: 117%;
+		position: absolute;
+		margin: auto;
+	}
+}
+.services {
+	background-color: #FA927E;
+	text-align: center;
+	padding: rem-calc(10) 0;
+	path {
+		@include default-path;
+	}
+	svg {
+		@include default-svg;
+	}
+}
+// END MAIN CONTENT
+
+// START FOOTER ///////
+
+footer {
+	background-color: $pink;
+	text-align: center;
+	padding: rem-calc(20) 0 rem-calc(5) 0;
+	margin-top: rem-calc(40);
+	color: #fff;
+	font-family: "Open Sans";
+}
+.fbox {
+	width: rem-calc(1000);
+	height: auto;
+
+}
+.sigla {
+	width: rem-calc(140);
+}
+.f-menu li {
+	display: inline-block;
+	list-style: none;
+	padding: 0 rem-calc(15) 0 rem-calc(15);
+}
+.f-info li {
+	display: inline-block;
+	list-style: none;
+	padding: 0 rem-calc(15) 0 rem-calc(15);
+}
+.f-info p {
+	margin-bottom: 0;
+}
+
+// pagina Despre Noi //////
+.about {
+	padding-top: rem-calc(50);
+	padding-left: rem-calc(40);
+}
+.pic-bg {
+	background: url(../images/clienti2.jpg) no-repeat no-repeat center;
+	background-size: cover;
+	height: rem-calc(500);
+	width: auto;
+}
+.pic-bg2 {
+	background: url(../images/angajat-client.jpg) no-repeat no-repeat center;
+	background-size: cover;
+	height: rem-calc(500);
+	width: auto;
+}
+h5, h6 {
+	color: $brown;
+}
