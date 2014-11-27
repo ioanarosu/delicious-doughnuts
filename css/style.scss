@@ -53,7 +53,6 @@ body {
 		display: inline-block;
 		color: $brown;
 		font-size: rem-calc(18);
-		padding: rem-calc(18) rem-calc(5) 0;
 		font-weight: 400;
 		height: $header-height;
 		&:hover {
@@ -62,6 +61,10 @@ body {
 			a {
 				color: #fff;
 			}
+		}
+		a {
+			padding: rem-calc(18) rem-calc(5);
+			line-height: rem-calc(68);
 		}
 	}
 }
@@ -93,15 +96,26 @@ h2 {
 }
 .introduction-box {
 	height: rem-calc(250);
-	padding: rem-calc(25) rem-calc(25);
+	padding: rem-calc(15) rem-calc(25);
 	svg {
 		@include default-svg;
 	}
 	path {
 		@include default-path;
 	}
+	p {
+		line-height: 1.4;
+	}
 	h2 {
 		text-align: center;
+	}
+	a {
+		color: #4a4a4a;
+		float: right;
+		font-size: rem-calc(14);
+		&:hover {
+			color: $pink;
+		}
 	}
 }
 .info-loc-centered {
@@ -148,6 +162,9 @@ footer {
 	margin-top: rem-calc(40);
 	color: #fff;
 	font-family: "Open Sans";
+	a {
+		color: #fff;
+	}
 }
 .fbox {
 	width: rem-calc(1000);
@@ -173,8 +190,15 @@ footer {
 
 // pagina Despre Noi //////
 .about {
-	padding-top: rem-calc(50);
-	padding-left: rem-calc(40);
+	padding: rem-calc(30) rem-calc(30) rem-calc(10) rem-calc(30);
+	span {
+		font-size: rem-calc(14);
+		float: right;
+	}
+	p {
+		margin-bottom: 0;
+		font-weight: 400;
+	}
 }
 .pic-bg {
 	background: url(../images/clienti2.jpg) no-repeat no-repeat center;
@@ -191,3 +215,24 @@ footer {
 h5, h6 {
 	color: $brown;
 }
+// END DESPRE NOI/////
+
+// START DESPRE PRODUSE-AVANTAJE CLIENTI////
+.circle {
+	width: rem-calc(50);
+	padding-top: rem-calc(6);
+	margin: 0 auto rem-calc(8) auto;
+	text-align: center;
+	height: rem-calc(50);
+	border-radius: 50%;
+	clear: both;
+	border: 1px solid $pink;
+	path {
+		fill: $pink;
+	}
+	svg {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+}
+// END DESPRE PRODUSE-AVANTAJE CLIENTI///
