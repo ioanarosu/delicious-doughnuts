@@ -1,15 +1,17 @@
-@import "settings";
-@import "../bower_components/foundation/scss/normalize";
-@import "../bower_components/foundation/scss/foundation/components/global";
-@import "../bower_components/foundation/scss/foundation/components/type";
-@import "../bower_components/foundation/scss/foundation/components/grid";
-
 $yellow: #FEE684;
 $pink: #FA927E;
 $brown: #8B572A;
 $pale-yellow: #FFFAEB;
-
 $header-height: rem-calc(70);
+
+@import "settings";
+@import "../bower_components/foundation/scss/normalize";
+@import "../bower_components/foundation/scss/foundation/components/global";
+@import "../bower_components/foundation/scss/foundation/components/type";
+@import "../bower_components/foundation/scss/foundation/components/top-bar";
+@import "../bower_components/foundation/scss/foundation/components/magellan";
+@import "../bower_components/foundation/scss/foundation/components/grid";
+
 
 @mixin default-svg {
 	width: rem-calc(22);
@@ -23,12 +25,6 @@ body {
 	color: #4A4A4A;
 	background-color: $pale-yellow;
 }
-// START HEADER
-
-.header {
-	background-color: $yellow;
-	height: $header-height;
-}
 .logo-area {
 	display: inline-block;
 	float: left;
@@ -38,6 +34,26 @@ body {
 	height: rem-calc(40);
 	padding-top: rem-calc(6);
 }
+
+a {
+	color: $brown;
+	&:hover {
+		color: $brown;
+	}
+}
+
+.bg-color {
+	background-color: $yellow;
+}
+h2 {
+ color: $brown;
+ font-family: "Curlz";
+ font-size: rem-calc(42);
+}
+
+@media #{$medium-up} {
+// START HEADER
+
 .logo-area p {
 	color: #4A4A4A;
 	font-size: rem-calc(12);
@@ -53,7 +69,7 @@ body {
 		display: inline-block;
 		color: $brown;
 		font-size: rem-calc(18);
-		font-weight: 400;
+		font-weight: 300;
 		height: $header-height;
 		&:hover {
 			color: #fff;
@@ -68,12 +84,7 @@ body {
 		}
 	}
 }
-a {
-	color: $brown;
-	&:hover {
-		color: $brown;
-	}
-}
+
 
 // END HEADER
 
@@ -83,36 +94,33 @@ a {
 	background-size: cover;
 	height: rem-calc(486);
 }
+
 // start noutati delicioase
 .wrap {
 	margin-top: rem-calc(40);
 }
-.bg-color {
-	background-color: $yellow;
-}
-h2 {
- color: $brown;
- font-family: "Curlz";
-}
+
 .introduction-box {
 	height: rem-calc(250);
 	padding: rem-calc(15) rem-calc(25);
+	p {
+		margin-bottom: 0;
+	}
 	svg {
 		@include default-svg;
 	}
 	path {
 		@include default-path;
 	}
-	p {
-		line-height: 1.4;
-	}
 	h2 {
 		text-align: center;
+		font-size: rem-calc(42);
 	}
 	a {
 		color: #4a4a4a;
+		font-size: rem-calc(11);
 		float: right;
-		font-size: rem-calc(14);
+		margin-top: rem-calc(10);
 		&:hover {
 			color: $pink;
 		}
@@ -144,6 +152,12 @@ h2 {
 	background-color: #FA927E;
 	text-align: center;
 	padding: rem-calc(10) 0;
+	a {
+		padding: rem-calc(40) 0 rem-calc(10) 0;
+	}
+	a:hover {
+		color:#fff;
+	}
 	path {
 		@include default-path;
 	}
@@ -161,6 +175,7 @@ footer {
 	padding: rem-calc(20) 0 rem-calc(5) 0;
 	margin-top: rem-calc(40);
 	color: #fff;
+	font-weight: 300;
 	font-family: "Open Sans";
 	a {
 		color: #fff;
@@ -178,6 +193,8 @@ footer {
 	display: inline-block;
 	list-style: none;
 	padding: 0 rem-calc(15) 0 rem-calc(15);
+	font-size: rem-calc(14);
+
 }
 .f-info li {
 	display: inline-block;
@@ -186,6 +203,7 @@ footer {
 }
 .f-info p {
 	margin-bottom: 0;
+	font-size: rem-calc(14);
 }
 
 // pagina Despre Noi //////
@@ -236,3 +254,130 @@ h5, h6 {
 	}
 }
 // END DESPRE PRODUSE-AVANTAJE CLIENTI///
+// START PAGE CONTACT//
+.contact {
+		letter-spacing: rem-calc(0.4);
+	h6 {
+		color: #4a4a4a;
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+	h5 {
+		color: $brown;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.line {
+	height: rem-calc(1);
+	background-color: #979797;
+	margin: rem-calc(8) 0;
+}
+.hours {
+	letter-spacing: rem-calc(0.4);
+	 h6 {
+		display: inline-block;
+		color: #4a4a4a;
+		font-weight: 400;
+	}
+	h5 {
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-top: rem-calc(25);
+		margin-bottom: 0;
+	}
+	p {
+		margin-bottom: 0;
+		margin-right: rem-calc(25);
+		display: inline-block;
+	}
+}
+.contact-form {
+	input {
+		width: 100%;
+		margin-top: rem-calc(10);
+		border: 1px solid #9b9b9b;
+		padding-left: 10px;
+		font-weight: 400;
+		height: rem-calc(35);
+		font-weight: 300;
+		font-size: rem-calc(12);
+	}
+	textarea {
+		width: 100%;
+		margin-top: rem-calc(10);
+		font-size: rem-calc(12);
+		padding-left: 10px;
+		height: rem-calc(100);
+	}
+
+}
+button {
+		background-color: #E13C1A;
+		margin-top: rem-calc(35);
+		text-align: center;
+		border: none;
+		color: #fff;
+		font-size: rem-calc(14);
+		font-weight: 400;
+		text-transform: uppercase;
+		transition: background-color 0.4s ease;
+	}
+button:hover {
+	background-color: #C23416;
+	transform: scale(1.05);
+}
+// END PAGE CONTACT//
+
+
+// START PAGE MENIU///
+.stiky-header {
+	background-color: $pale-yellow;
+	height: auto;
+	.row {
+		background-color: $pink;
+	}
+	li {
+		display: inline-block;
+		list-style: none;
+		padding: rem-calc(10) rem-calc(17);
+		color: #fff;
+	}
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: $brown;
+	}
+	.active a {
+		color: $brown;
+	}
+
+}
+.items {
+	margin-left: 0;
+	span {
+		width: 70%;
+		display: block;
+		float: left;
+	}
+}
+.items li {
+	list-style: none;
+	h6 {
+		display: inline-block;
+	}
+	 p {
+		font-size: rem-calc(14);
+		font-weight: 400;
+		margin-bottom: 0;
+		float: right;
+	}
+}
+
+// END PAGE MENU//
+}

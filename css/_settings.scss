@@ -796,7 +796,7 @@ $h2-font-size: rem-calc(30);
 // $include-html-magellan-classes: $include-html-classes;
 
 // $magellan-bg: $white;
-// $magellan-padding: 0 !important;
+$magellan-padding: 0;
 
 // 18. Off-canvas
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1362,11 +1362,11 @@ $h2-font-size: rem-calc(30);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $yellow;
+$topbar-bg: $yellow;
 
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: $header-height;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
