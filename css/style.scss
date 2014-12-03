@@ -2,6 +2,8 @@ $yellow: #FEE684;
 $pink: #FA927E;
 $brown: #8B572A;
 $pale-yellow: #FFFAEB;
+
+@import "../bower_components/foundation/scss/foundation/functions";
 $header-height: rem-calc(70);
 
 @import "settings";
@@ -10,6 +12,7 @@ $header-height: rem-calc(70);
 @import "../bower_components/foundation/scss/foundation/components/type";
 @import "../bower_components/foundation/scss/foundation/components/top-bar";
 @import "../bower_components/foundation/scss/foundation/components/magellan";
+@import "../bower_components/foundation/scss/foundation/components/visibility";
 @import "../bower_components/foundation/scss/foundation/components/grid";
 
 
@@ -25,23 +28,62 @@ body {
 	color: #4A4A4A;
 	background-color: $pale-yellow;
 }
-.logo-area {
-	display: inline-block;
-	float: left;
-	text-align: right;
+// START HEADER//
+// .nav-menu {
+// 	float: right;
+// 	padding: 0;
+// 	margin: 0;
+// 	li {
+// 		list-style: none;
+// 		display: inline-block;
+// 		color: $brown;
+// 		font-size: rem-calc(18);
+// 		font-weight: 300;
+// 		height: $header-height;
+// 		&:hover {
+// 			color: #fff;
+// 			background-color: $pink;
+// 			a {
+// 				color: #fff;
+// 			}
+// 		}
+// 		a {
+// 			padding: rem-calc(18) rem-calc(5);
+// 			line-height: rem-calc(68);
+// 		}
+// 	}
+// }
+.wrap {
+	margin-top: rem-calc(20);
 }
-.logo img {
-	height: rem-calc(40);
-	padding-top: rem-calc(6);
+.contain-to-grid {
+	border-bottom: rem-calc(0.8) solid lighten($brown,50%);
 }
-
+.logo p {
+	color: #4A4A4A;
+	font-size: rem-calc(12);
+	margin: 0;
+	float: right;
+}
+.logo {
+	width: rem-calc(201);
+	a {
+		display: block;
+	}
+	img {
+		height: rem-calc(40);
+		padding-top: rem-calc(6);
+	}
+}
 a {
 	color: $brown;
 	&:hover {
-		color: $brown;
+		color: #fff;
 	}
 }
+// END HEADER//
 
+// START MAIN CONTENT//
 .bg-color {
 	background-color: $yellow;
 }
@@ -49,60 +91,11 @@ h2 {
  color: $brown;
  font-family: "Curlz";
  font-size: rem-calc(42);
+ margin-bottom: rem-calc(10);
 }
-
-@media #{$medium-up} {
-// START HEADER
-
-.logo-area p {
-	color: #4A4A4A;
-	font-size: rem-calc(12);
-	margin: 0;
-}
-
-.nav-menu {
-	float: right;
-	padding: 0;
-	margin: 0;
-	li {
-		list-style: none;
-		display: inline-block;
-		color: $brown;
-		font-size: rem-calc(18);
-		font-weight: 300;
-		height: $header-height;
-		&:hover {
-			color: #fff;
-			background-color: $pink;
-			a {
-				color: #fff;
-			}
-		}
-		a {
-			padding: rem-calc(18) rem-calc(5);
-			line-height: rem-calc(68);
-		}
-	}
-}
-
-
-// END HEADER
-
-// START MAIN CONTENT
-.slider {
-	background: url(../images/cornete2.jpg) no-repeat no-repeat center;
-	background-size: cover;
-	height: rem-calc(486);
-}
-
-// start noutati delicioase
-.wrap {
-	margin-top: rem-calc(40);
-}
-
 .introduction-box {
-	height: rem-calc(250);
-	padding: rem-calc(15) rem-calc(25);
+	height: auto;
+	padding: rem-calc(25) rem-calc(25);
 	p {
 		margin-bottom: 0;
 	}
@@ -114,24 +107,17 @@ h2 {
 	}
 	h2 {
 		text-align: center;
-		font-size: rem-calc(42);
+		font-size: rem-calc(34);
 	}
-	a {
-		color: #4a4a4a;
-		font-size: rem-calc(11);
+	.view-more {
+		color: $pink;
+		font-size: rem-calc(14);
 		float: right;
-		margin-top: rem-calc(10);
+
 		&:hover {
-			color: $pink;
+			color: darken($pink,40%);
 		}
 	}
-}
-.info-loc-centered {
-		text-align: center;
-		font-size: rem-calc(16);
-		p {
-			margin-bottom: rem-calc(10);
-		}
 }
 
 .center-image {
@@ -151,9 +137,10 @@ h2 {
 .services {
 	background-color: #FA927E;
 	text-align: center;
-	padding: rem-calc(10) 0;
+	padding: rem-calc(20) 0;
 	a {
 		padding: rem-calc(40) 0 rem-calc(10) 0;
+		color: $brown;
 	}
 	a:hover {
 		color:#fff;
@@ -165,111 +152,101 @@ h2 {
 		@include default-svg;
 	}
 }
-// END MAIN CONTENT
-
-// START FOOTER ///////
-
+.info-loc-centered {
+		text-align: center;
+		font-size: rem-calc(16);
+		p {
+			margin-bottom: rem-calc(25);
+		}
+		a {
+			font-size: rem-calc(16);
+			float: none;
+			color: #4a4a4a;
+		}
+		a:hover {
+			color: $pink;
+		}
+}
 footer {
 	background-color: $pink;
-	text-align: center;
 	padding: rem-calc(20) 0 rem-calc(5) 0;
-	margin-top: rem-calc(40);
 	color: #fff;
 	font-weight: 300;
 	font-family: "Open Sans";
+	text-align: center;
+	font-size: rem-calc(14);
 	a {
 		color: #fff;
 	}
-}
-.fbox {
-	width: rem-calc(1000);
-	height: auto;
-
-}
-.sigla {
-	width: rem-calc(140);
-}
-.f-menu li {
-	display: inline-block;
-	list-style: none;
-	padding: 0 rem-calc(15) 0 rem-calc(15);
-	font-size: rem-calc(14);
-
-}
-.f-info li {
-	display: inline-block;
-	list-style: none;
-	padding: 0 rem-calc(15) 0 rem-calc(15);
-}
-.f-info p {
-	margin-bottom: 0;
-	font-size: rem-calc(14);
+	a:hover {
+		color: $brown;
+	}
+	li {
+		display: inline-block;
+		padding: 0 rem-calc(10);
+		line-height: rem-calc(35);
+		list-style: none;
+	}
 }
 
-// pagina Despre Noi //////
+
+// START ABOUT PAGE//////////////
 .about {
-	padding: rem-calc(30) rem-calc(30) rem-calc(10) rem-calc(30);
+	padding: rem-calc(30);
 	span {
-		font-size: rem-calc(14);
 		float: right;
+		color: $pink;
 	}
 	p {
-		margin-bottom: 0;
 		font-weight: 400;
+		line-height: 1.7;
 	}
 }
-.pic-bg {
-	background: url(../images/clienti2.jpg) no-repeat no-repeat center;
-	background-size: cover;
-	height: rem-calc(500);
-	width: auto;
+.team {
+	h3 {
+		margin: rem-calc(20) 0 rem-calc(15) 0;
+	}
+	.name-employ {
+		color: $brown;
+		display: block;
+		font-size: rem-calc(24);
+	}
+	.title {
+		font-size: rem-calc(18);
+		color: $pink;
+		display: block;
+	}
 }
 .pic-bg2 {
 	background: url(../images/angajat-client.jpg) no-repeat no-repeat center;
 	background-size: cover;
 	height: rem-calc(500);
 	width: auto;
+	margin-top: rem-calc(20);
 }
-h5, h6 {
-	color: $brown;
-}
-// END DESPRE NOI/////
-
-// START DESPRE PRODUSE-AVANTAJE CLIENTI////
-.circle {
-	width: rem-calc(50);
-	padding-top: rem-calc(6);
-	margin: 0 auto rem-calc(8) auto;
-	text-align: center;
-	height: rem-calc(50);
-	border-radius: 50%;
-	clear: both;
-	border: 1px solid $pink;
-	path {
-		fill: $pink;
-	}
-	svg {
-		width: rem-calc(30);
-		height: rem-calc(30);
-	}
-}
-// END DESPRE PRODUSE-AVANTAJE CLIENTI///
+// END ABOUT PAGE////////////////
 // START PAGE CONTACT//
 .contact {
 		letter-spacing: rem-calc(0.4);
-	h6 {
+		text-align: left;
+		a {
+			color: #4a4a4a;
+			font-size: rem-calc(16);
+		}
+		a:hover {
+			color: $pink;
+		}
+	span {
 		color: #4a4a4a;
-		font-weight: 400;
-		margin-bottom: 0;
-	}
-	h5 {
-		color: $brown;
-		font-weight: 400;
-		text-transform: uppercase;
-		margin-bottom: 0;
+		font-weight: 300;
+		font-size: rem-calc(16);
 	}
 	p {
 		margin-bottom: 0;
+		color: #4a4a4a;
+		font-weight: 400;
+		font-size: rem-calc(18);
+		text-transform: capitalize;
 	}
 }
 .line {
@@ -279,21 +256,14 @@ h5, h6 {
 }
 .hours {
 	letter-spacing: rem-calc(0.4);
-	 h6 {
-		display: inline-block;
+	 .bold {
 		color: #4a4a4a;
 		font-weight: 400;
 	}
-	h5 {
-		text-transform: uppercase;
-		font-weight: 400;
-		margin-top: rem-calc(25);
-		margin-bottom: 0;
-	}
 	p {
+		color: #4a4a4a;
+		font-size: rem-calc(18);
 		margin-bottom: 0;
-		margin-right: rem-calc(25);
-		display: inline-block;
 	}
 }
 .contact-form {
@@ -312,12 +282,11 @@ h5, h6 {
 		margin-top: rem-calc(10);
 		font-size: rem-calc(12);
 		padding-left: 10px;
-		height: rem-calc(100);
+		height: rem-calc(150);
 	}
-
 }
 button {
-		background-color: #E13C1A;
+		background-color: lighten($brown,20%);
 		margin-top: rem-calc(35);
 		text-align: center;
 		border: none;
@@ -328,35 +297,13 @@ button {
 		transition: background-color 0.4s ease;
 	}
 button:hover {
-	background-color: #C23416;
+	background-color: $pink;
 	transform: scale(1.05);
 }
 // END PAGE CONTACT//
-
-
 // START PAGE MENIU///
 .stiky-header {
-	background-color: $pale-yellow;
-	height: auto;
-	.row {
-		background-color: $pink;
-	}
-	li {
-		display: inline-block;
-		list-style: none;
-		padding: rem-calc(10) rem-calc(17);
-		color: #fff;
-	}
-	a {
-		color: #fff;
-	}
-	a:hover {
-		color: $brown;
-	}
-	.active a {
-		color: $brown;
-	}
-
+	display: none;
 }
 .items {
 	margin-left: 0;
@@ -379,5 +326,182 @@ button:hover {
 	}
 }
 
+#map-canvas {
+	width: 100%;
+	height: rem-calc(300);
+	&.large-map {
+		height: rem-calc(320);
+	}
+	img {
+    max-width: none;
+	}
+}
+
+@media #{$medium-up} {
+.top-bar-section .dropdown li:not(.has-form) a:not(.button) {
+	line-height: rem-calc(45);
+}
+
+.slider {
+	background: url(../images/cornete2.jpg) no-repeat no-repeat center;
+	background-size: cover;
+	height: rem-calc(486);
+}
+
+.wrap {
+	margin-top: rem-calc(25);
+}
+.introduction-box a {
+	margin-top: rem-calc(10);
+}
+.show-for-medium-up li {
+	display: inline-block !important;
+}
+.sigla {
+	width: rem-calc(140);
+}
+.f-menu {
+	display: inline-block;
+	li {
+		padding: 0 rem-calc(15) 0 rem-calc(15);
+	}
+}
+.f-info p {
+	margin-bottom: 0;
+}
+// START ABOUT PAGE//////////
+.pic-bg {
+	background: url(../images/clienti2.jpg) no-repeat no-repeat center;
+	background-size: cover;
+	height: rem-calc(500);
+	width: auto;
+	margin-top: rem-calc(20);
+}
+// END  ABOUT PAGE/////
+
+// START DESPRE PRODUSE-AVANTAJE CLIENTI////
+.circle {
+	width: rem-calc(50);
+	padding-top: rem-calc(6);
+	margin: 0 auto rem-calc(16) auto;
+	text-align: center;
+	height: rem-calc(50);
+	border-radius: 50%;
+	clear: both;
+	border: 1px solid $pink;
+	path {
+		fill: $pink;
+	}
+	svg {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+}
+// END DESPRE PRODUSE-AVANTAJE CLIENTI///
+
+
+.hours {
+	p {
+		display: inline-block;
+		margin-right: rem-calc(15);
+		margin-bottom: rem-calc(25);
+	}
+}
+.stiky-header {
+	background-color: $pale-yellow;
+	height: auto;
+	display: block;
+	.row {
+		background-color: $pink;
+	}
+	li {
+		display: inline-block;
+		list-style: none;
+		padding: rem-calc(10) rem-calc(17);
+		color: #fff;
+	}
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: $brown;
+	}
+	.active a {
+		color: $brown;
+	}
+}
+.items {
+	margin-left: 0;
+	span {
+		width: 70%;
+		display: block;
+		float: left;
+	}
+}
+.items li {
+	list-style: none;
+	h6 {
+		display: inline-block;
+	}
+	 p {
+		font-size: rem-calc(14);
+		font-weight: 400;
+		margin-bottom: 0;
+		float: right;
+	}
+}
 // END PAGE MENU//
+
+}
+
+@media #{$medium-only} {
+.top-bar-section ul.right {
+	float: none !important;
+}
+.logo {
+	margin: 0 auto;
+}
+.top-bar .title-area {
+	float: none;
+	text-align: center;
+}
+.logo p {
+	float: none;
+	text-align: center;
+}
+.container:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+.top-bar-section {
+	text-align: center;
+	background-color: $yellow;
+}
+.top-bar-section ul li {
+	display: inline-block;
+	float: none;
+}
+.top-bar {
+	height: auto;
+	line-height: rem-calc(35);
+}
+.top-bar-section li:not(.has-form) a:not(.button) {
+	line-height: rem-calc(35);
+}
+.top-bar-section .has-dropdown > a:after {
+	top: rem-calc(20);
+}
+ul.sub-nav {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+.contact h2 {
+	text-align: left;
+}
+.hours h2 {
+	text-align: left;
+}
 }

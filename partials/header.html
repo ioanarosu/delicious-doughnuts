@@ -1,20 +1,34 @@
-<div class="contain-to-grid sticky">
-  <nav class="top-bar header" data-topbar role="navigation" data-options="sticky_on: large">
-    <div class="logo-area">
-      <div class="logo">
-        <a href="/" title="">
-          <img src="../images/svg/sigla-logo-font.svg" alt="logo">
-        </a>
-      </div>
-      <p>Cele mai bune gogosi din oras</p>
-    </div>
-    <ul class="nav-menu">
-      <li><a href="/">Acasa</a></li>
-      <li><a href="despre-noi.html" title="">Despre noi</a></li>
-      <li><a href="meniu.html" title="">Meniu</a></li>
-      <li><a href="comenzi.html" title="">Comenzi</a></li>
-      <li><a href="contact.html" title="">Contact</a></li>
-      <li><a href="galerie.html" title="">Galerie</a></li>
+<div class="contain-to-grid sticky clearfix">
+  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+    <ul class="title-area">
+      <li class="name">
+        <div class="logo">
+          <a href="/" title="">
+            <img src="../images/svg/sigla-logo-font.svg" alt="logo">
+          </a>
+          <p>Cele mai bune gogosi din oras</p>
+        </div>
+
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
+    <section class="top-bar-section container">
+      <ul class="right clearfix">
+        <li><a href="/">Acasa</a></li>
+        <li class="has-dropdown">
+          <a href="despre-noi.html" title="">Despre noi</a>
+          <ul class="dropdown">
+            <li><a href="despre-noi.html#story">Povestea noastra</a></li>
+            <li><a href="despre-noi.html#echipa">Echipa noastra</a></li>
+            <li><a href="despre-produse.html#produse">Despre produse</a></li>
+            <li><a href="despre-produse.html#avantaje">Avantaje clienti</a></li>
+          </ul>
+        </li>
+        <li><a href="meniu.html" title="">Meniu</a></li>
+        <li><a href="comenzi.html" title="">Comenzi</a></li>
+        <li><a href="contact.html" title="">Contact</a></li>
+        <li><a href="galerie.html" title="">Galerie</a></li>
+      </ul>
+    </section>
   </nav>
 </div>

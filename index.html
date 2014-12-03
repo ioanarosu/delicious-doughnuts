@@ -9,18 +9,18 @@
     <div class="slider">
     </div>
     <!-- start noutati -->
-      <div class="row wrap">
+      <div class="row wrap collapse">
         <h2>Noutati delicioase</h2>
-        <div class="large-3 columns">
+        <div class="small-6 medium-3 columns">
           <img src="../images/tartecufructe2.jpg" alt="tartacufructe">
         </div>
-        <div class="large-3 columns">
+        <div class="small-6 medium-3 columns">
           <img src="../images/strawberry-muffins2.jpg" alt="muffins">
         </div>
-        <div class="large-3 columns">
+        <div class="small-6 medium-3 columns">
           <img src="../images/tartecufructe2.jpg" alt="tartacufructe">
         </div>
-        <div class="large-3 columns">
+        <div class="small-6 medium-3 columns">
            <img src="../images/strawberry-muffins2.jpg" alt="muffins">
         </div>
       </div>
@@ -28,13 +28,13 @@
 
     <!-- start prez-menu -->
       <div class="row wrap bg-color">
-        <div class="large-4 columns introduction-box">
+        <div class="large-4 medium-5 columns introduction-box">
           <h2>Meniu</h2>
           <p>Oferim clientilor nostri o gama variata de gogosi, placinte, invartite, tarte, rulade, fursecuri si prajituri de casa.
           </p>
-          <a href="meniu.html" title="">Vezi Meniu</a>
+          <a class="view-more" href="meniu.html" title="">Vezi meniu</a>
         </div>
-        <div class="large-8 columns center-image">
+        <div class="large-8 medium-7 columns center-image">
           <img src="../images/BreakfastMuffins2.jpg" alt="">
         </div>
       </div>
@@ -42,31 +42,34 @@
 
     <!-- start Despre Noi -->
     <div class="row wrap bg-color">
-        <div class="large-8 columns center-image">
+        <div class="large-8 medium-7 columns center-image hide-for-small-only">
           <img src="../images/prez-cosulete.jpg" alt="">
         </div>
-        <div class="large-4 columns introduction-box">
+        <div class="large-4 medium-5 columns introduction-box">
           <h2>Despre Noi</h2>
           <p>Delicious Doughnuts este patiseria care si-a propus sa aduca gustul prajiturilor de casa, preparate din ingrediente naturale, urmand retete traditionale.</p>
-          <a href="despre-noi.html" title="">Mai mult...</a>
+          <a class="view-more" href="despre-noi.html" title="">Mai mult...</a>
+        </div>
+        <div class="large-8 columns center-image show-for-small-only">
+          <img src="../images/prez-cosulete.jpg" alt="">
         </div>
       </div>
     <!-- end Despre Noi -->
     <!-- start info-comenzi -->
-    <div class="row bg-color">
-      <div class="large-3 services columns">
+    <div class="row services">
+      <div class="small-6 large-3 columns">
         @@include("images/svg/cupcake3-1.svg")
         <h6><a href="despre-produse.html" title="despre-produse">Despre produse</a></h6>
       </div>
-      <div class="large-3 services columns">
+      <div class="small-6 large-3 columns">
         @@include("images/svg/mini1.svg")
         <h6><a href="despre-produse.html" title="">Avantaje clienti</a></h6>
       </div>
-      <div class="large-3 services columns">
+      <div class="small-6 large-3 columns">
         @@include("images/svg/phone.svg")
         <h6><a href="comenzi.html" title="">Comenzi</a></h6>
       </div>
-      <div class="large-3 services columns">
+      <div class="small-6 large-3 columns">
         @@include("images/svg/delivery25.svg")
         <h6><a href="comenzi.html" title="">Livrare produse</a></h6>
       </div>
@@ -74,17 +77,17 @@
     <!-- end info-comenzi -->
 
     <!-- map and loc -->
-      <div class="row wrap bg-color">
-        <div class="large-4 columns introduction-box info-loc-centered">
+      <div class="row wrap bg-color collapse">
+        <div class="large-4 medium-6 columns introduction-box info-loc-centered">
           @@include("images/svg/location-icon.svg")
           <p>Soseaua Mihai Bravu 134, bloc D21</p>
           @@include("images/svg/phone.svg")
-          <p>+40 731 892 848</p>
+          <p><a href="tel:+40 731 892 848">+40 731 892 848</a></p>
           @@include("images/svg/facebook55.svg")
-          <p>facebook.com/deliciousdoughnuts</p>
+          <p><a href="http:\\facebook.com/deliciousdoughnuts" target="blank">facebook.com/deliciousdoughnuts</a></p>
         </div>
-        <div class="large-8 columns">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.6748186375057!2d26.134706520901492!3d44.439832187108884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff2ae231491b%3A0x44b6665586937c43!2s%C8%98oseaua+Mihai+Bravu+134%2C+Bucure%C8%99ti!5e0!3m2!1sen!2sro!4v1416909373776" width="651" height="244" frameborder="0" style="border:0"></iframe>
+        <div class="large-8 medium-6 columns">
+          <div id="map-canvas"></div>
         </div>
       </div>
     <!-- end map and loc-->
