@@ -1,11 +1,7 @@
-$yellow: #FEE684;
-$pink: #FA927E;
-$brown: #8B572A;
-$pale-yellow: #FFFAEB;
-
 @import "../bower_components/foundation/scss/foundation/functions";
 $header-height: rem-calc(70);
 
+@import "application_settings";
 @import "settings";
 @import "../bower_components/foundation/scss/normalize";
 @import "../bower_components/foundation/scss/foundation/components/global";
@@ -15,7 +11,6 @@ $header-height: rem-calc(70);
 @import "../bower_components/foundation/scss/foundation/components/visibility";
 @import "../bower_components/foundation/scss/foundation/components/grid";
 
-
 @mixin default-svg {
 	width: rem-calc(22);
 	height: rem-calc(22);
@@ -23,44 +18,27 @@ $header-height: rem-calc(70);
 @mixin default-path {
 	fill: #613D1C;
 }
+
+// ~~~~~~~~~~~~~~~~~~~~~~~START GENERAL STYLES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 body {
-	// font-family: "Open Sans", sans-serif;
-	color: #4A4A4A;
+	color: #565a5c;
 	background-color: $pale-yellow;
 }
-// START HEADER//
-// .nav-menu {
-// 	float: right;
-// 	padding: 0;
-// 	margin: 0;
-// 	li {
-// 		list-style: none;
-// 		display: inline-block;
-// 		color: $brown;
-// 		font-size: rem-calc(18);
-// 		font-weight: 300;
-// 		height: $header-height;
-// 		&:hover {
-// 			color: #fff;
-// 			background-color: $pink;
-// 			a {
-// 				color: #fff;
-// 			}
-// 		}
-// 		a {
-// 			padding: rem-calc(18) rem-calc(5);
-// 			line-height: rem-calc(68);
-// 		}
-// 	}
-// }
-.wrap {
-	margin-top: rem-calc(20);
+
+.index-slider.full-width {
+	.img-box {
+	  height: rem-calc(486);
+	}
+	.slick-slide img {
+	  width: 100%;
+	}
 }
 .contain-to-grid {
 	border-bottom: rem-calc(0.8) solid lighten($brown,50%);
 }
 .logo p {
-	color: #4A4A4A;
+	color: #3E2A18;
+	font-weight: 400;
 	font-size: rem-calc(12);
 	margin: 0;
 	float: right;
@@ -89,15 +67,18 @@ a {
 }
 h2 {
  color: $brown;
+ letter-spacing: 1px;
  font-family: "Curlz";
  font-size: rem-calc(42);
  margin-bottom: rem-calc(10);
+ text-align: left;
 }
 .introduction-box {
 	height: auto;
 	padding: rem-calc(25) rem-calc(25);
 	p {
 		margin-bottom: 0;
+		font-weight: 400;
 	}
 	svg {
 		@include default-svg;
@@ -111,18 +92,28 @@ h2 {
 	}
 	.view-more {
 		color: $pink;
-		font-size: rem-calc(14);
+		font-size: rem-calc(16);
 		float: right;
-
 		&:hover {
 			color: darken($pink,40%);
 		}
 	}
 }
-
+.center-image-slider {
+	position: relative;
+	overflow: hidden;
+	img {
+		top: -100%;
+		bottom: -100%;
+		left: -100%;
+		right: -100%;
+		max-width: 117%;
+		position: absolute;
+		margin: auto;
+	}
+}
 .center-image {
 	position: relative;
-	height: rem-calc(250);
 	overflow: hidden;
 	img {
 		top: -100%;
@@ -138,9 +129,11 @@ h2 {
 	background-color: #FA927E;
 	text-align: center;
 	padding: rem-calc(20) 0;
+	text-transform: capitalize;
 	a {
 		padding: rem-calc(40) 0 rem-calc(10) 0;
 		color: $brown;
+		font-size: rem-calc(18);
 	}
 	a:hover {
 		color:#fff;
@@ -167,12 +160,12 @@ h2 {
 			color: $pink;
 		}
 }
+
 footer {
-	background-color: $pink;
+	background: $pink url(../images/patternDD2.jpg) repeat-x;
 	padding: rem-calc(20) 0 rem-calc(5) 0;
 	color: #fff;
 	font-weight: 300;
-	font-family: "Open Sans";
 	text-align: center;
 	font-size: rem-calc(14);
 	a {
@@ -193,14 +186,19 @@ footer {
 // START ABOUT PAGE//////////////
 .about {
 	padding: rem-calc(30);
+	height: auto;
 	span {
 		float: right;
+		font-size: rem-calc(14);
 		color: $pink;
+		letter-spacing: 0.2px;
 	}
 	p {
-		font-weight: 400;
 		line-height: 1.7;
 	}
+}
+.pres-img {
+	height: rem-calc(250);
 }
 .team {
 	h3 {
@@ -209,10 +207,10 @@ footer {
 	.name-employ {
 		color: $brown;
 		display: block;
-		font-size: rem-calc(24);
+		font-size: rem-calc(22);
 	}
 	.title {
-		font-size: rem-calc(18);
+		font-size: rem-calc(16);
 		color: $pink;
 		display: block;
 	}
@@ -224,7 +222,7 @@ footer {
 	width: auto;
 	margin-top: rem-calc(20);
 }
-// END ABOUT PAGE////////////////
+// END ABOUT PAGE
 // START PAGE CONTACT//
 .contact {
 		letter-spacing: rem-calc(0.4);
@@ -302,6 +300,9 @@ button:hover {
 }
 // END PAGE CONTACT//
 // START PAGE MENIU///
+.img-box-slider {
+	display: inline-block;
+}
 .stiky-header {
 	display: none;
 }
@@ -319,10 +320,9 @@ button:hover {
 		display: inline-block;
 	}
 	 p {
-		font-size: rem-calc(14);
-		font-weight: 400;
 		margin-bottom: 0;
 		float: right;
+		color: #2a2a2a;
 	}
 }
 
@@ -336,172 +336,181 @@ button:hover {
     max-width: none;
 	}
 }
+// END GENERAL STYLES
 
+// START DESKTOP STYLES
 @media #{$medium-up} {
-.top-bar-section .dropdown li:not(.has-form) a:not(.button) {
-	line-height: rem-calc(45);
-}
-
-.slider {
-	background: url(../images/cornete2.jpg) no-repeat no-repeat center;
-	background-size: cover;
-	height: rem-calc(486);
-}
-
-.wrap {
-	margin-top: rem-calc(25);
-}
-.introduction-box a {
-	margin-top: rem-calc(10);
-}
-.show-for-medium-up li {
-	display: inline-block !important;
-}
-.sigla {
-	width: rem-calc(140);
-}
-.f-menu {
-	display: inline-block;
-	li {
-		padding: 0 rem-calc(15) 0 rem-calc(15);
+	.top-bar-section .dropdown li:not(.has-form) a:not(.button) {
+		line-height: rem-calc(45);
 	}
-}
-.f-info p {
-	margin-bottom: 0;
-}
-// START ABOUT PAGE//////////
-.pic-bg {
-	background: url(../images/clienti2.jpg) no-repeat no-repeat center;
-	background-size: cover;
-	height: rem-calc(500);
-	width: auto;
-	margin-top: rem-calc(20);
-}
-// END  ABOUT PAGE/////
 
-// START DESPRE PRODUSE-AVANTAJE CLIENTI////
-.circle {
-	width: rem-calc(50);
-	padding-top: rem-calc(6);
-	margin: 0 auto rem-calc(16) auto;
-	text-align: center;
-	height: rem-calc(50);
-	border-radius: 50%;
-	clear: both;
-	border: 1px solid $pink;
-	path {
-		fill: $pink;
+	.pres-img {
+		height: 100%;
 	}
-	svg {
-		width: rem-calc(30);
-		height: rem-calc(30);
+
+	.wrap {
+		margin-top: rem-calc(40);
 	}
-}
-// END DESPRE PRODUSE-AVANTAJE CLIENTI///
-
-
-.hours {
-	p {
+	.introduction-box {
+		a {margin-top: rem-calc(10);}
+		p {
+			font-weight: 300;
+		}
+	}
+	.show-for-medium-up li {
+		display: inline-block !important;
+	}
+	.sigla {
+		width: rem-calc(140);
+	}
+	.f-menu {
 		display: inline-block;
-		margin-right: rem-calc(15);
-		margin-bottom: rem-calc(25);
+		li {
+			padding: 0 rem-calc(15) 0 rem-calc(15);
+		}
 	}
-}
-.stiky-header {
-	background-color: $pale-yellow;
-	height: auto;
-	display: block;
-	.row {
-		background-color: $pink;
-	}
-	li {
-		display: inline-block;
-		list-style: none;
-		padding: rem-calc(10) rem-calc(17);
-		color: #fff;
-	}
-	a {
-		color: #fff;
-	}
-	a:hover {
-		color: $brown;
-	}
-	.active a {
-		color: $brown;
-	}
-}
-.items {
-	margin-left: 0;
-	span {
-		width: 70%;
-		display: block;
-		float: left;
-	}
-}
-.items li {
-	list-style: none;
-	h6 {
-		display: inline-block;
-	}
-	 p {
-		font-size: rem-calc(14);
-		font-weight: 400;
+	.f-info p {
 		margin-bottom: 0;
-		float: right;
+	}
+	// START ABOUT PAGE//////////
+	.pic-bg {
+		background: url(../images/clienti2.jpg) no-repeat no-repeat center;
+		background-size: cover;
+		height: rem-calc(500);
+		width: auto;
+		margin-top: rem-calc(20);
+	}
+	// END  ABOUT PAGE/////
+
+	// START DESPRE PRODUSE-AVANTAJE CLIENTI////
+	.circle {
+		width: rem-calc(50);
+		padding-top: rem-calc(6);
+		margin: 0 auto rem-calc(16) auto;
+		text-align: center;
+		height: rem-calc(50);
+		border-radius: 50%;
+		clear: both;
+		border: 1px solid $pink;
+		path {
+			fill: $pink;
+		}
+		svg {
+			width: rem-calc(30);
+			height: rem-calc(30);
+		}
+	}
+	// END DESPRE PRODUSE-AVANTAJE CLIENTI///
+
+
+	.hours {
+		p {
+			display: inline-block;
+			margin-right: rem-calc(15);
+			margin-bottom: rem-calc(25);
+		}
+	}
+	.stiky-header {
+		background-color: $pale-yellow;
+		height: auto;
+		display: block;
+		.row {
+			background-color: $pink;
+		}
+		li {
+			display: inline-block;
+			list-style: none;
+			padding: rem-calc(10) rem-calc(17);
+			color: #fff;
+		}
+		a {
+			color: #fff;
+		}
+		a:hover {
+			color: $brown;
+		}
+		.active a {
+			color: $brown;
+		}
+	}
+	.items {
+		margin-left: 0;
+		span {
+			width: 70%;
+			display: block;
+			float: left;
+		}
+	}
+	.items li {
+		list-style: none;
+		h6 {
+			display: inline-block;
+		}
+		 p {
+			font-size: rem-calc(14);
+			font-weight: 400;
+			margin-bottom: 0;
+			float: right;
+		}
+	}
+	// END PAGE MENU//
+
+}
+// END DESKTOP STYLES
+
+// START TABLET CSS
+@media #{$medium-only} {
+	.top-bar-section ul.right {
+		float: none !important;
+	}
+	.logo {
+		margin: 0 auto;
+	}
+	.top-bar .title-area {
+		float: none;
+		text-align: center;
+	}
+	.logo p {
+		float: none;
+		text-align: center;
+	}
+	.container:after {
+	  content:"";
+	  display:table;
+	  clear:both;
+	}
+	.top-bar-section {
+		text-align: center;
+		background-color: $yellow;
+	}
+	.top-bar-section ul li {
+		display: inline-block;
+		float: none;
+	}
+	.top-bar {
+		height: auto;
+		line-height: rem-calc(35);
+	}
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		line-height: rem-calc(35);
+	}
+	.top-bar-section .has-dropdown > a:after {
+		top: rem-calc(20);
+	}
+	ul.sub-nav {
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+	.contact h2 {
+		text-align: left;
+	}
+	.hours h2 {
+		text-align: left;
+	}
+	.pres-img {
+		height: 100%;
 	}
 }
-// END PAGE MENU//
-
-}
-
-@media #{$medium-only} {
-.top-bar-section ul.right {
-	float: none !important;
-}
-.logo {
-	margin: 0 auto;
-}
-.top-bar .title-area {
-	float: none;
-	text-align: center;
-}
-.logo p {
-	float: none;
-	text-align: center;
-}
-.container:after {
-  content:"";
-  display:table;
-  clear:both;
-}
-.top-bar-section {
-	text-align: center;
-	background-color: $yellow;
-}
-.top-bar-section ul li {
-	display: inline-block;
-	float: none;
-}
-.top-bar {
-	height: auto;
-	line-height: rem-calc(35);
-}
-.top-bar-section li:not(.has-form) a:not(.button) {
-	line-height: rem-calc(35);
-}
-.top-bar-section .has-dropdown > a:after {
-	top: rem-calc(20);
-}
-ul.sub-nav {
-	text-align: center;
-}
-h2 {
-	text-align: center;
-}
-.contact h2 {
-	text-align: left;
-}
-.hours h2 {
-	text-align: left;
-}
-}
+// END TABLET CSS

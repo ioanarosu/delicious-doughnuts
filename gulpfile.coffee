@@ -11,8 +11,11 @@ paths =
   scripts:
     src: ['js/**/*.js']
     dest: 'public/js'
+  sass_styles:
+    src: ['css/**/*.scss']
+    dest: 'public/css'
   styles:
-    src: ['css/**/*.scss', 'css/**/*.map']
+    src: ['css/**/*.css', 'css/**/*.map']
     dest: 'public/css'
   fonts:
     src: ['fonts/**/*']
@@ -38,9 +41,14 @@ handleError = (err)->
   @emit 'end'
 
 #styles
+gulp.task 'sassStyles', ->
+  gulp.src(paths.sass_styles.src)
+  .pipe sass().on('error', handleError)
+  .pipe gulp.dest(paths.styles.dest)
+  .pipe connect.reload()
+
 gulp.task 'styles', ->
   gulp.src(paths.styles.src)
-  .pipe sass().on('error', handleError)
   .pipe gulp.dest(paths.styles.dest)
   .pipe connect.reload()
 
@@ -82,6 +90,7 @@ gulp.task 'connect', ->
 
 gulp.task 'watch', ->
   gulp.watch paths.scripts.src, ['scripts']
+  gulp.watch paths.sass_styles.src, ['sassStyles']
   gulp.watch paths.styles.src, ['styles']
   gulp.watch paths.fonts.src, ['fonts']
   gulp.watch paths.html.src, ['html']
@@ -99,7 +108,7 @@ gulp.task 'deploy-server', ->
     recursive: true
     clean: true
 
-gulp.task 'assets', ['cleanup', 'scripts', 'styles', 'fonts', 'images', 'html']
+gulp.task 'assets', ['cleanup', 'scripts', 'sassStyles', 'styles', 'fonts', 'images', 'html']
 
 default_sequence = ['connect', 'assets', 'watch']
 

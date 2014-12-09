@@ -2,8 +2,6 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-//
-
 // Table of Contents
 // Foundation Settings
 //
@@ -86,7 +84,7 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-open-sans: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+$font-family-open-sans: "Ubuntu", Helvetica, Arial, sans-serif;
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -1387,7 +1385,7 @@ $topbar-link-color: $brown;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
-$topbar-link-font-size: rem-calc(16);
+$topbar-link-font-size: rem-calc(18);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $pink;
 // $topbar-link-bg-color-hover: scale-color($pink, $lightness: -5%);
