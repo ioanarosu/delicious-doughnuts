@@ -1373,7 +1373,7 @@ $topbar-height: $header-height;
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: $pink;
 // $topbar-dropdown-link-color: $white;
-$topbar-dropdown-link-bg: $pink;
+$topbar-dropdown-link-bg: scale-color($pink, $lightness: -5%);
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: $brown;
@@ -1389,7 +1389,7 @@ $topbar-link-font-size: rem-calc(18);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $pink;
 // $topbar-link-bg-color-hover: scale-color($pink, $lightness: -5%);
-$topbar-link-bg-hover: scale-color($pink, $lightness: -5%);
+$topbar-link-bg-hover: $pink;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="218px" height="71px" viewBox="0 0 218 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>slideshow_controls</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-4" sketch:type="MSArtboardGroup" transform="translate(-336.000000, -604.000000)" fill="#FFFFFF">
+            <g id="slideshow_controls" sketch:type="MSLayerGroup" transform="translate(336.000000, 604.000000)">
+                <path d="M108.384776,34.0857864 L125.355339,17.1152237 L126.769553,18.5294373 L109.79899,35.5 L126.769553,52.4705627 L125.355339,53.8847763 L108.384776,36.9142136 L91.4142136,53.8847763 L90,52.4705627 L106.970563,35.5 L90,18.5294373 L91.4142136,17.1152237 L108.384776,34.0857864 L108.384776,34.0857864 Z" id="close" sketch:type="MSShapeGroup"></path>
+                <path d="M0.529437252,35.3847763 L0.5,35.3553391 L35.8553391,1.13686838e-13 L37.2695526,1.41421356 L3.29898987,35.3847763 L37.2695526,69.3553391 L35.8553391,70.7695526 L0.5,35.4142136 L0.529437252,35.3847763 L0.529437252,35.3847763 Z" id="prev" sketch:type="MSShapeGroup"></path>
+                <path d="M181.644661,35 L181.615224,34.9705627 L216.970563,-0.384776311 L218.384776,1.02943725 L184.414214,35 L218.384776,68.9705627 L216.970563,70.3847763 L181.615224,35.0294373 L181.644661,35 L181.644661,35 Z" id="next" sketch:type="MSShapeGroup" transform="translate(200.000000, 35.000000) scale(-1, 1) translate(-200.000000, -35.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

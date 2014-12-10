@@ -56,7 +56,7 @@ body {
 a {
 	color: $brown;
 	&:hover {
-		color: #fff;
+		color: $pink;
 	}
 }
 // END HEADER//
@@ -67,13 +67,15 @@ a {
 }
 h2 {
  color: $brown;
- letter-spacing: 1px;
  font-family: "Curlz";
  font-size: rem-calc(42);
  margin-bottom: rem-calc(10);
  text-align: left;
 }
 .introduction-box {
+	h5 {
+		margin: rem-calc(10) 0 rem-calc(8);
+	}
 	height: auto;
 	padding: rem-calc(25) rem-calc(25);
 	p {
@@ -239,9 +241,9 @@ footer {
 		font-weight: 300;
 		font-size: rem-calc(16);
 	}
-	p {
-		margin-bottom: 0;
+	h3 {
 		color: #4a4a4a;
+		padding-bottom: 0;
 		font-weight: 400;
 		font-size: rem-calc(18);
 		text-transform: capitalize;
@@ -265,6 +267,9 @@ footer {
 	}
 }
 .contact-form {
+	label {
+		font-size: rem-calc(16);
+	}
 	input {
 		width: 100%;
 		margin-top: rem-calc(10);
@@ -273,18 +278,17 @@ footer {
 		font-weight: 400;
 		height: rem-calc(35);
 		font-weight: 300;
-		font-size: rem-calc(12);
 	}
 	textarea {
 		width: 100%;
 		margin-top: rem-calc(10);
-		font-size: rem-calc(12);
+		font-size: rem-calc(16);
 		padding-left: 10px;
 		height: rem-calc(150);
 	}
 }
-button {
-		background-color: lighten($brown,20%);
+.button {
+		background-color: darken($brown,0.2%);
 		margin-top: rem-calc(35);
 		text-align: center;
 		border: none;
@@ -294,11 +298,31 @@ button {
 		text-transform: uppercase;
 		transition: background-color 0.4s ease;
 	}
-button:hover {
+.button:hover {
 	background-color: $pink;
 	transform: scale(1.05);
 }
 // END PAGE CONTACT//
+
+// START GALLERY
+.gallery-display {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	-moz-column-gap: 5px;
+	column-count: 4;
+	-webkit-column-gap: 5px;
+	padding: 5px;
+}
+.gallery-box{
+	width: 245px;
+	border: 2px solid #fff;
+	height: auto;
+	overflow: hidden;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+// END GALLERY
+
 // START PAGE MENIU///
 .img-box-slider {
 	display: inline-block;
@@ -325,7 +349,9 @@ button:hover {
 		color: #2a2a2a;
 	}
 }
-
+ul.sub-nav {
+		margin-left: 0;
+	}
 #map-canvas {
 	width: 100%;
 	height: rem-calc(300);
@@ -406,12 +432,10 @@ button:hover {
 	.hours {
 		p {
 			display: inline-block;
-			margin-right: rem-calc(15);
-			margin-bottom: rem-calc(25);
 		}
 	}
 	.stiky-header {
-		background-color: $pale-yellow;
+		background-color: $pink;
 		height: auto;
 		display: block;
 		.row {
@@ -499,6 +523,7 @@ button:hover {
 	}
 	ul.sub-nav {
 		text-align: center;
+		margin-left: 0;
 	}
 	h2 {
 		text-align: center;
