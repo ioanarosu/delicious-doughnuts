@@ -8,14 +8,19 @@
   <body>
     @@include('./partials/header.html')
     <div class="index-slider full-width">
-      <div class="img-box center-image-slider">
-        <img src="../images/cornete2.jpg" alt="">
+      <div class="img-box">
+        <img src="../images/slider-index-01.jpg" alt="">
       </div>
-      <div class="img-box center-image-slider">
-        <img src="../images/slider02.jpg" alt="">
+      <div class="img-box">
+        <img src="../images/slider-index-02.jpg" alt="">
       </div>
-      <div class="img-box center-image-slider"><img src="../images/slider03.JPG" alt=""></div>
-      <div class="img-box center-image-slider"><img src="../images/slider04.JPG" alt=""></div>
+      <div class="img-box">
+        <img src="../images/slider-index-03.JPG" alt="">
+      </div>
+      <div class="img-box">
+        <img src="../images/slider-index-04.JPG" alt="">
+      </div>
+      <h3>Comenzi la 0731-892-848</h3>
     </div>
     <!-- start noutati -->
       <div class="row wrap collapse">
@@ -69,7 +74,7 @@
         </div>
         <div class="large-7 medium-6 columns" data-equalizer-watch>
           <div class="pres-img center-image">
-            <img src="../images/BreakfastMuffins2.jpg" alt="">
+            <img src="../images/menu-pres.jpg" alt="">
           </div>
         </div>
       </div>
@@ -79,7 +84,7 @@
     <div class="row wrap bg-color collapse" data-equalizer>
         <div class="large-7 medium-6 columns hide-for-small-only" data-equalizer-watch>
           <div class="pres-img center-image">
-            <img src="../images/prez-cosulete.jpg" alt="">
+            <img src="../images/about-pres.jpg" alt="about-pres">
           </div>
         </div>
         <div class="large-5 medium-6 columns" data-equalizer-watch>
@@ -91,7 +96,7 @@
         </div>
         <div class="large-8 columns show-for-small-only" data-equalizer-watch>
           <div class="pres-img center-image">
-            <img src="../images/prez-cosulete.jpg" alt="">
+            <img src="../images/about-pres.jpg" alt="about-pres">
           </div>
         </div>
       </div>
@@ -135,5 +140,19 @@
     <!-- start footer -->
     @@include('./partials/footer.html')
     <!-- end footer -->
+    <script type="text/javascript">
+  $(document).ready(function(){
+    $('.index-slider').slick({
+      dots: true,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+  });
+
+</script>
   </body>
 </html>

@@ -21,7 +21,7 @@ paths =
     src: ['fonts/**/*']
     dest: 'public/fonts'
   images:
-    src: ['images/**/*']
+    src: ['images/**/*', 'images-selected/**/*']
     dest: 'public/images'
   html:
     src: ['*.html']

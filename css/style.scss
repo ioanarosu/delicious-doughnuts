@@ -27,10 +27,20 @@ body {
 
 .index-slider.full-width {
 	.img-box {
-	  height: rem-calc(486);
+	  // height: rem-calc(486);
 	}
 	.slick-slide img {
 	  width: 100%;
+	}
+	h3 {
+		text-shadow: -1px -1px 0 #4a4a4a;
+		color: #fff;
+		font-size: rem-calc(34);
+		font-family: "Curlz";
+		text-align: center;
+		margin-top: rem-calc(-60);
+		position: relative;
+		display: block;
 	}
 }
 .contain-to-grid {
@@ -99,19 +109,6 @@ h2 {
 		&:hover {
 			color: darken($pink,40%);
 		}
-	}
-}
-.center-image-slider {
-	position: relative;
-	overflow: hidden;
-	img {
-		top: -100%;
-		bottom: -100%;
-		left: -100%;
-		right: -100%;
-		max-width: 117%;
-		position: absolute;
-		margin: auto;
 	}
 }
 .center-image {
@@ -183,8 +180,12 @@ footer {
 		list-style: none;
 	}
 }
-
-
+.institution {
+	text-align: left;
+	span {
+		float: right;
+	}
+}
 // START ABOUT PAGE//////////////
 .about {
 	padding: rem-calc(30);
@@ -306,47 +307,59 @@ footer {
 
 // START GALLERY
 .gallery-display {
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	-moz-column-gap: 5px;
-	column-count: 4;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	column-gap: 5px;
 	-webkit-column-gap: 5px;
-	padding: 5px;
+	-moz-column-gap: 5px;
 }
-.gallery-box{
-	width: 245px;
-	border: 2px solid #fff;
+.gallery-box {
+	width: 100%;
 	height: auto;
 	overflow: hidden;
 	display: inline-block;
-	margin-bottom: 5px;
+	border: 1px solid $pale-yellow;
 }
 // END GALLERY
 
 // START PAGE MENIU///
-.img-box-slider {
-	display: inline-block;
-}
+// .img-box-slider {
+// 	display: inline-block;
+// }
 .stiky-header {
 	display: none;
 }
+.menu-pic {
+	height: rem-calc(250);
+	margin-right: rem-calc(5);
+}
 .items {
 	margin-left: 0;
-	span {
-		width: 70%;
-		display: block;
-		float: left;
-	}
-}
-.items li {
-	list-style: none;
-	h6 {
-		display: inline-block;
-	}
-	 p {
-		margin-bottom: 0;
-		float: right;
-		color: #2a2a2a;
+	margin-bottom: 0;
+	li {
+		list-style: none;
+		margin-left: 0;
+		margin-top: rem-calc(15);
+		h6 {
+			display: inline-block;
+		}
+		.menu-item {
+			width: 70%;
+			display: block;
+			float: left;
+			font-weight: 400;
+			font-size: rem-calc(16);
+		}
+		.menu-price {
+			margin-bottom: 0;
+			float: right;
+			font-weight: 500;
+		}
+		.menu-ingredients {
+			width: 100%;
+			font-size: rem-calc(13);
+		}
 	}
 }
 ul.sub-nav {
@@ -400,9 +413,9 @@ ul.sub-nav {
 	}
 	// START ABOUT PAGE//////////
 	.pic-bg {
-		background: url(../images/clienti2.jpg) no-repeat no-repeat center;
+		background: url(../images/clienti.jpg) no-repeat no-repeat center;
 		background-size: cover;
-		height: rem-calc(500);
+		height: rem-calc(560);
 		width: auto;
 		margin-top: rem-calc(20);
 	}
@@ -457,28 +470,13 @@ ul.sub-nav {
 			color: $brown;
 		}
 	}
-	.items {
-		margin-left: 0;
-		span {
-			width: 70%;
-			display: block;
-			float: left;
-		}
-	}
-	.items li {
-		list-style: none;
-		h6 {
-			display: inline-block;
-		}
-		 p {
-			font-size: rem-calc(14);
-			font-weight: 400;
-			margin-bottom: 0;
-			float: right;
-		}
-	}
 	// END PAGE MENU//
 
+	.gallery-display {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
 }
 // END DESKTOP STYLES
 
@@ -537,5 +535,11 @@ ul.sub-nav {
 	.pres-img {
 		height: 100%;
 	}
+	.gallery-display {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	}
 }
+
 // END TABLET CSS
