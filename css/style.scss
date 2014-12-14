@@ -39,12 +39,13 @@ body {
 		font-family: "Curlz";
 		text-align: center;
 		margin-top: rem-calc(-60);
-		position: relative;
+		position: absolute;
 		display: block;
+		width: 100%;
 	}
 }
 .contain-to-grid {
-	border-bottom: rem-calc(0.8) solid lighten($brown,50%);
+	border-bottom: rem-calc(1) solid lighten($brown,40%);
 }
 .logo p {
 	color: #3E2A18;
@@ -124,6 +125,9 @@ h2 {
 		margin: auto;
 	}
 }
+.news {
+	height: rem-calc(250);
+}
 .services {
 	background-color: #FA927E;
 	text-align: center;
@@ -192,7 +196,7 @@ footer {
 	height: auto;
 	span {
 		float: right;
-		font-size: rem-calc(14);
+		font-size: rem-calc(16);
 		color: $pink;
 		letter-spacing: 0.2px;
 	}
@@ -219,7 +223,7 @@ footer {
 	}
 }
 .pic-bg2 {
-	background: url(../images/angajat-client.jpg) no-repeat no-repeat center;
+	background: url(../images/slider-index-01.jpg) no-repeat no-repeat center;
 	background-size: cover;
 	height: rem-calc(500);
 	width: auto;
@@ -386,7 +390,9 @@ ul.sub-nav {
 	.pres-img {
 		height: 100%;
 	}
-
+	.news {
+	height: rem-calc(300);
+	}
 	.wrap {
 		margin-top: rem-calc(40);
 	}
