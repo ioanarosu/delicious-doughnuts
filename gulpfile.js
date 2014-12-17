@@ -13,6 +13,7 @@ var htmlmin = require('gulp-htmlmin');
 var concat = require('gulp-concat');
 var htmlreplace = require("gulp-html-replace");
 var gulpif = require('gulp-if');
+var runSequence = require('gulp-run-sequence');
 
 var paths = {
   favicons: {
@@ -21,7 +22,7 @@ var paths = {
   },
   scripts: {
     src: ['js/vendor/jquery.js', 'js/vendor/modernizr.js', 'js/vendor/fastclick.js',
-    'js/vendor/slick.min.js', 'js/foundation/foundation.js', 'js/foundation/foundation.topbar.js',
+    'js/vendor/slick.min.js', 'js/vendor/jquery.swipebox.js', 'js/foundation/foundation.js', 'js/foundation/foundation.topbar.js',
     'js/foundation/foundation.magellan.js', 'js/foundation/foundation.equalizer.js'],
     dest: 'public/js'
   },
@@ -98,8 +99,8 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts.src)
-  .pipe(gulpif(isProduction, concat('all.js')))
   .pipe(gulpif(isProduction, uglify()))
+  .pipe(gulpif(isProduction, concat('all.js')))
   .pipe(gulp.dest(paths.scripts.dest))
   .pipe(connect.reload());
 });
@@ -124,7 +125,7 @@ gulp.task('html', function() {
   	css: 'css/all.css'
   })))
   .pipe(gulpif(isProduction, htmlmin({
-  	collapseWhitespace: true,
+  	collapseWhitespace: false,
   	removeComments: true,
   	minifyJS: true,
   	minifyCSS: true,
@@ -135,7 +136,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('cleanup', function() {
-  return gulp.src("/public/**/*", {
+  return gulp.src("./public", {
     read: false
   }).pipe(clean());
 });
@@ -159,9 +160,11 @@ gulp.task('watch', function() {
   return gulp.watch(paths.favicons.src, ['favicons']);
 });
 
-gulp.task('assets', ['cleanup', 'scripts', 'sassStyles', 'styles', 'fonts', 'images', 'favicons', 'html']);
+gulp.task('assets', ['scripts', 'sassStyles', 'styles', 'fonts', 'images', 'favicons', 'html']);
 
-default_sequence = ['connect', 'assets', 'watch'];
-
-gulp.task('default', default_sequence);
-gulp.task('deploy', ['assets']);
+gulp.task('default', function(cb){
+  runSequence('cleanup', 'assets', 'connect', 'watch', cb);
+});
+gulp.task('deploy', function(cb){
+  runSequence('cleanup', 'assets', cb);
+});

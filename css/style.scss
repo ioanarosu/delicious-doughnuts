@@ -126,7 +126,7 @@ h2 {
 	}
 }
 .news {
-	height: rem-calc(250);
+	height: rem-calc(280);
 }
 .services {
 	background-color: #FA927E;
@@ -269,6 +269,7 @@ footer {
 		color: #4a4a4a;
 		font-size: rem-calc(18);
 		margin-bottom: 0;
+		margin-right: rem-calc(15);
 	}
 }
 .contact-form {
@@ -373,7 +374,7 @@ ul.sub-nav {
 	width: 100%;
 	height: rem-calc(300);
 	&.large-map {
-		height: rem-calc(320);
+		height: rem-calc(327);
 	}
 	img {
     max-width: none;
