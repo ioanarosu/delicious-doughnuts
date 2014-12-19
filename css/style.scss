@@ -24,7 +24,9 @@ body {
 	color: #565a5c;
 	background-color: $pale-yellow;
 }
-
+.slick-dots {
+	margin-left: 0;
+}
 .index-slider.full-width {
 	.img-box {
 	  // height: rem-calc(486);
@@ -35,10 +37,10 @@ body {
 	h3 {
 		text-shadow: -1px -1px 0 #4a4a4a;
 		color: #fff;
-		font-size: rem-calc(34);
+		font-size: rem-calc(30);
 		font-family: "Curlz";
 		text-align: center;
-		margin-top: rem-calc(-60);
+		margin-top: rem-calc(-36);
 		position: absolute;
 		display: block;
 		width: 100%;
@@ -105,6 +107,7 @@ h2 {
 	}
 	.view-more {
 		color: $pink;
+		font-weight: 400;
 		font-size: rem-calc(16);
 		float: right;
 		&:hover {
@@ -148,9 +151,9 @@ h2 {
 	}
 	.holliday {
 		display: inline-block;
-		margin-right: rem-calc(50);
 		font-size: rem-calc(18);
 		color: #fff;
+		margin-left: rem-calc(10);
 	}
 	h2 {
 		text-align: center;
@@ -158,7 +161,6 @@ h2 {
 		font-size: rem-calc(30);
 		display: inline-block;
 		letter-spacing: rem-calc(2);
-		margin: 0 rem-calc(50) 0 0;
 	}
 }
 .info-loc-centered {
@@ -400,7 +402,10 @@ ul.sub-nav {
 	.top-bar-section .dropdown li:not(.has-form) a:not(.button) {
 		line-height: rem-calc(45);
 	}
-
+	.index-slider.full-width  h3 {
+			font-size: rem-calc(34);
+			margin-top: rem-calc(-60);
+	}
 	.pres-img {
 		height: 100%;
 	}
@@ -542,6 +547,15 @@ ul.sub-nav {
 	ul.sub-nav {
 		text-align: center;
 		margin-left: 0;
+	}
+	.center-image img {
+		top: -100%;
+		bottom: -100%;
+		left: -100%;
+		right: -100%;
+		max-width: 202%;
+		position: absolute;
+		margin: auto;
 	}
 	h2 {
 		text-align: center;
