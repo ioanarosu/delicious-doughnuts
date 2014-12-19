@@ -132,7 +132,6 @@ h2 {
 	background-color: #FA927E;
 	text-align: center;
 	padding: rem-calc(20) 0;
-	text-transform: capitalize;
 	a {
 		padding: rem-calc(40) 0 rem-calc(10) 0;
 		color: $brown;
@@ -146,6 +145,20 @@ h2 {
 	}
 	svg {
 		@include default-svg;
+	}
+	.holliday {
+		display: inline-block;
+		margin-right: rem-calc(50);
+		font-size: rem-calc(18);
+		color: #fff;
+	}
+	h2 {
+		text-align: center;
+		color: #fff;
+		font-size: rem-calc(30);
+		display: inline-block;
+		letter-spacing: rem-calc(2);
+		margin: 0 rem-calc(50) 0 0;
 	}
 }
 .info-loc-centered {
