@@ -308,7 +308,8 @@ footer {
 		margin-top: rem-calc(10);
 		font-size: rem-calc(16);
 		padding-left: 10px;
-		height: rem-calc(150);
+		height: rem-calc(205);
+		border: 1px solid #9b9b9b;
 	}
 }
 .button {
@@ -325,6 +326,32 @@ footer {
 .button:hover {
 	background-color: $pink;
 	transform: scale(1.05);
+}
+
+:required {
+
+}
+/* style all input elements with a required attribute */
+input:required {
+
+}
+/**
+ * style input elements that have a required
+ * attribute and a focus state
+ */
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
+}
+/**
+ * style input elements that have a required
+ * attribute and a hover state
+ */
+input:required:hover {
+  opacity: 1;
+}
+.thankyou {
+	display: none;
 }
 // END PAGE CONTACT//
 
