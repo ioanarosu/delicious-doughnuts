@@ -149,6 +149,11 @@ gulp.task('connect', function() {
   });
 });
 
+gulp.task('seo', function() {
+  return gulp.src(['sitemap.xml', 'robots.txt']).
+  pipe(gulp.dest(paths.html.dest))
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.scripts.src, ['scripts']);
   gulp.watch(paths.sass_styles.src, ['sassStyles']);
@@ -160,7 +165,7 @@ gulp.task('watch', function() {
   return gulp.watch(paths.favicons.src, ['favicons']);
 });
 
-gulp.task('assets', ['scripts', 'sassStyles', 'styles', 'fonts', 'images', 'favicons', 'html']);
+gulp.task('assets', ['scripts', 'sassStyles', 'styles', 'fonts', 'images', 'favicons', 'html', 'seo']);
 
 gulp.task('default', function(cb){
   runSequence('cleanup', 'assets', 'connect', 'watch', cb);
